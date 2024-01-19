@@ -205,14 +205,18 @@ function readCookie()
 	}
 
     // If there is no cookie AKA no user is signed in --> go to login page (index.html)
-	//if( userId < 0 ) { window.location.href = "index.html";}
-	if (document.cookie.indexOf('userId') == -1 ) { window.location.href = "index.html"; }
 
-    // If there IS a saved user cookie --> go to home page (main.html)
-    else 
-	{ 
-		document.getElementById("helloBanner1").innerText = "Hello,  " + firstName + " " + lastName;
-		document.getElementById("helloBanner2").innerText = "Hello,  " + firstName + " " + lastName; 
-		document.getElementById("userID").innerText = userId;
-	}	
+	//COMMENT THIS SECTION OUT IF YOU WANT TO EDIT main.html WITHOUT BACKEND SETUP
+
+	//SECTION START
+	// if (document.cookie.indexOf('userId') == -1 ) { window.location.href = "index.html"; }
+	//
+    // // If there IS a saved user cookie --> go to home page (main.html)
+    // else
+	// {
+	// 	document.getElementById("helloBanner1").innerText = "Hello,  " + firstName + " " + lastName;
+	// 	document.getElementById("helloBanner2").innerText = "Hello,  " + firstName + " " + lastName;
+	// 	document.getElementById("userID").innerText = userId;
+	// }
+	// SECTION END
 }
