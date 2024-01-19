@@ -1,0 +1,42 @@
+.body
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav-link.active
+{
+    background-color: black;
+}
+
+.container
+{
+    color: rgb(0, 255, 255);
+    border-radius: 50px,50px,50px,50px;
+
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link
+{
+    background-color: #000000;
+}
+
+.nav {
+    --bs-nav-link-padding-x: 1rem;
+    --bs-nav-link-padding-y: 0.5rem;
+    --bs-nav-link-font-weight: ;
+    --bs-nav-link-color: #000000;
+    --bs-nav-link-hover-color: #787c35;
+    --bs-nav-link-disabled-color: var(--bs-secondary-color);
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+/* This the Main header of the page */
+h1.mainHeader
+{
+    color: 000000;
+    padding: auto;
+}

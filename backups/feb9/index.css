@@ -1,0 +1,137 @@
+/* Body of All Webpages */
+body
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #201e1e;
+    color: #ffffff; /* Text Color */
+}
+
+/* Active Navigation Pill */
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link
+{
+    background-color: #535252;
+}
+
+
+/* Incorrect Password Notification on index.html */
+.p 
+{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Navigation Pills Layout */
+.nav 
+{
+    --bs-nav-link-padding-x: 1rem;
+    --bs-nav-link-padding-y: 0.5rem;
+    --bs-nav-link-font-weight: ;
+    --bs-nav-link-color: #8a848a;
+    --bs-nav-link-hover-color: #f8f8f6;
+    --bs-nav-link-disabled-color: var(--bs-secondary-color);
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+/* Delete Buttons in main.html */
+#deletebutton.btn-primary
+{
+  --bs-btn-bg: rgb(225, 48, 48);
+  --bs-btn-hover-color: rgb(212, 75, 75);
+  --bs-btn-hover-bg: rgb(212,75,75);
+  --bs-btn-hover-border-color: #fff;
+  --bs-btn-active-bg: #e87e7e;
+}
+
+/* Edit Buttons in main.html */
+#editbutton.btn-primary
+{
+  --bs-btn-bg: rgb(45, 107, 215);
+  --bs-btn-hover-color: rgb(120, 167, 217);
+  --bs-btn-hover-bg: rgb(120, 167, 217);
+  --bs-btn-hover-border-color: #fff;
+  --bs-btn-active-bg: #7ebce8;
+}
+
+/* Login Buttons */
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #a19a9a;
+    --bs-btn-border-color: #201e1e;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #eebb00;
+    --bs-btn-hover-border-color: #ffcc11;
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #c0ad1d;
+    --bs-btn-active-border-color: #0a53be;
+    --bs-btn-active-shadow: inset 0 3px 5pxrgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #0d6efd;
+    --bs-btn-disabled-border-color: #0d6efd;
+}
+
+/* Floating Labels in index.html and singup.html */
+.form-floating>label
+{
+    color: #595c5f
+}
+
+/* Row Structure in container in main.html */
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: 30%;
+    margin-left: 30%;
+}
+
+/* Header Title on main.html */
+.fs-4
+{
+    color: #ffffff;
+}
+
+/* Greeting in main.html -- MOBILE VERSION */
+#helloBanner1
+{
+  --bs-nav-link-hover-color: #8a848a;
+  color: #8a848a;
+}
+
+/* Greeting in main.html -- DESKTOP VERSION */
+#helloBanner2
+{
+  --bs-nav-link-hover-color: #8a848a;
+  color: #8a848a;
+}
+
+/* Table of Contacts in main.html */
+.table-dark
+{
+  --bs-table-bg: 201e1e;
+}
+
+/* Mobile Mode on main.html */
+@media only screen and (max-device-width: 768px) {
+    .show-mobile {
+      display: block !important;
+    }
+    .hide-mobile {
+      display: none !important;
+    }
+  }
+
+/* Desktop Mode on main.html */
+@media only screen and (min-device-width: 769px) {
+    .show-mobile {
+      display: none !important;
+    }
+    .hide-mobile {
+      display: block !important;
+    }
+  }

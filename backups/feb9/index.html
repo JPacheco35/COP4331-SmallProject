@@ -1,0 +1,72 @@
+<!-- LOGIN PAGE -->
+<html lang = "en">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        
+        <!-- Import BootStrap Stuff -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        
+        <!-- Import Custom CSS-->
+        <link href="index.css" rel = "stylesheet">
+
+        <!-- Tab Title -->
+        <title>Login</title>
+    </head>
+
+    <!-- All items are centered -->
+    <body style = "text-align: center;">
+
+        <!-- Import showPassword() -->
+        <script type="text/javascript" src="signIn.js"></script>
+
+        <!-- Navigation Pills -->        
+        <div class="container">
+            <header class="d-flex justify-content-center py-3">
+              <ul class="nav nav-pills">
+                <li class="nav-item"><a href="#" class="nav-link active">Login</a></li>         <!-- Login Pill (active) -->
+                <li class="nav-item"><a href="signup.html" class="nav-link">Sign Up</a></li>    <!-- Sign Up Pill-->
+              </ul>
+            </header>
+        </div>
+        
+        <!-- Main Title Header -->
+        <h1 class = "text-center py-3"> Contact Manager Login </h1> <br><br><br><br>
+
+        <!-- Existing User Login Form -->
+        <!-- ALL FIELDS ARE REQURIED -->
+        <form class = "text-center py-3">
+            
+            <!-- Username Field -->
+            <div class="form-floating mb-3 form-check-inline justify-content-center">
+                <input type="username" class="form-control" id="username" placeholder="placeholder" required>
+                <label for="floatingInput">Username</label>
+            </div><br>
+
+            <!-- Password Field -->
+            <div class="form-floating mb-3 form-check-inline justify-content-center">
+                <input type="password" class="form-control" id="password" placeholder="placeholder"  autocomplete="new-password" required>
+                <label for="floatingInput">Password</label>
+            </div><br>
+
+            <!-- Show Password Checkbox -->
+            <div class="form-check form-check-inline justify-content-center">
+                <input type="checkbox" onclick = "showPass()" class="form-check-input" > Show Password
+            </div><br><br>
+
+            <!-- Login Button -->  
+            <button type="submit" onclick = "doLogin();" class="btn btn-primary">Login</button>
+
+            <!-- DEBUG ONLY -->
+            <li class="nav-item"><a href="main.html" class="nav-link">DEBUG MAIN</a></li>
+
+            <!-- PLEASE DO NOT REMOVE-->
+            <p id="loginResult">test</p>
+            
+        </form>
+    
+    </body>
+
+</html>

@@ -1,0 +1,11 @@
+body
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* This the Main header of the page */
+h1.mainHeader
+{
+    color: ff0000;
+    padding: auto;
+}

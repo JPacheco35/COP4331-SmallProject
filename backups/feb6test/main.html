@@ -1,0 +1,272 @@
+<html lang = "en">
+    
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Import BootStrap Stuff -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="index.css" rel="stylesheet">
+
+    <title>Login</title>
+ 
+</head>
+
+
+<body>
+    <script type="text/javascript" src="addContact.js"></script>
+    <script type="text/javascript" src="editContact.js"></script>
+
+    <!-- MOBILE Page Layout -->
+    <nav class="show-mobile text-center">
+        <a class="d-flex text-decoration-none">
+
+            <div class="container-fluid p-2mo">
+                <img src="https://i.pinimg.com/originals/f8/1e/a7/f81ea7c786f7518345b1f1e2a9584cc8.png" alt="" width="40px" height="50px">
+                <span class="fs-4">Contact Manager</span>
+            </div><br>
+        </a>
+
+        <ul class="nav nav-pills justify-content-center">
+            <li class="nav-item"><a href="#" class="nav-link">Hello, FNAME LNAME</a></li>
+            <li class="nav-item"><a href="index.html" class="nav-link">Log Out</a></li>
+        </ul>
+
+        <div class="container-fluid p-2">
+            <div class="input-group">
+                <input type="search" class="form-control" placeholder="Search..." aria-label="Search" aria-describedby="search-addon" />
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </div>
+
+        <div class="col-sm-10 justify-content-center">
+            <table id="contactlist" class="table table-responsive px-2 table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Email Address</th>
+                        <th scope="col">Phone Number</th>
+                        <th scope="col">Date Added</th>
+                        <th scope="col">Edit/Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row" id="screaming">1</th>
+                        <td id="object + currentIteration()">Mark</td>
+                        <td id="{{'object' + currentIteration()}}">Otto</td>
+                        <td id="{{'object' + currentIteration()}}">@mdo</td>
+                        <td id="{{'object' + currentIteration()}}"><font color="black">Test</font>123-456-7890</td>
+                        <td>1.31.23</td>
+                        <td><button type="submit" id="{{'editButton' + currentIteration()}}" onclick="editContact()" class="btn btn-primary"></button><button type="submit" id="deletebutton" onclick="addContact()" class="btn btn-primary"></button><br></td>
+
+
+
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td>123-456-7890</td>
+                        <td>1.31.23</td>
+                        <td><button type="submit" id="editbutton" onclick="addContact()" class="btn btn-primary"></button><button type="submit" id="deletebutton" onclick="addContact()" class="btn btn-primary"></button><br></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>123-456-7890</td>
+                        <td>1.31.23</td>
+                        <td><button type="submit" id="editbutton" onclick="addContact()" class="btn btn-primary"></button><button type="submit" id="deletebutton" onclick="addContact()" class="btn btn-primary"></button><br></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col text-center">
+            <!-- Add Contact Sidebar -->
+            <div class="" d-flex flex-column flex-shrink-0 p-3 text-white style="width: 100%;">
+                <ul class="nav nav-pills flex-column mb-auto">
+
+                    <!-- Existing User Login Form, runs addContact.php -->
+                    <form class="">
+
+                        <!-- First Name -->
+                        <div class="form-group form-check-inline">
+                            <label> First Name:</label>
+                            <input type="text" class="form-control" id="firstname" placeholder="" required>
+                        </div><br><br>
+
+                        <!-- Last Name -->
+                        <div class="form-group form-check-inline">
+                            <label>Last Name:</label>
+                            <input type="text" class="form-control" id="lastname" placeholder="" required>
+                        </div><br><br>
+
+                        <!-- Email Address -->
+                        <div class="form-group form-check-inline">
+                            <label>Email Address:</label>
+                            <input type="text" class="form-control" id="email" placeholder="">
+                        </div><br><br>
+
+                        <!-- Phone Number -->
+                        <div class="form-group form-check-inline">
+                            <label>Phone Number:</label>
+                            <input type="text" class="form-control" id="phonenum" placeholder="">
+                        </div><br><br>
+
+                        <!-- Login Button -->
+                        <div class="text-center">
+                            <button type="submit" onclick="addContact()" class="btn btn-primary">Add Contact</button><br>
+                        </div><br>
+                    </form>
+
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+
+    <!-- DESKTOP Page Layout-->
+    <nav class="hide-mobile">
+        <div class="container-fluid" style="padding-left: 0px; padding-right: 0px;">
+
+            <header class="d-flex flex-wrap py-3 mb-4 border-bottom">
+
+                <a class="d-flex text-decoration-none">
+
+                    <div class="container-fluid p-2mo">
+                        <img src="https://i.pinimg.com/originals/f8/1e/a7/f81ea7c786f7518345b1f1e2a9584cc8.png" alt="" width="40px" height="50px">
+                        <img src="#" alt="" width="40px" height="0px">
+                        <span class="fs-4">Contact Manager</span>
+                    </div>
+
+                    <img src="#" alt="" width="250px" height="0px">
+                    <div class="container-fluid p-2">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Search..." aria-label="Search" aria-describedby="search-addon" />
+                            <button type="submit" class="btn btn-primary">Search</button>
+                        </div>
+                    </div>
+                </a>
+
+                <img src="#" alt="" width="15%" height="0px">
+
+                <ul class="nav nav-pills p-2">
+                    <li class="nav-item"><a href="#" class="nav-link">Hello, FNAME LNAME</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Log Out</a></li>
+                </ul>
+
+            </header>
+
+            <div class="container-fluid">
+                <div class="row ms-md-0 me-0">
+
+                    <div class="col-sm-2 ">
+                        <!-- Add Contact Sidebar -->
+                        <div class="d-flex flex-column flex-shrink-0 p-3 text-white border-end" style="width: 100%;">
+                            <ul class="nav nav-pills flex-column mb-auto">
+
+                                <!-- Existing User Login Form, runs addContact.php -->
+                                <form>
+
+                                    <!-- First Name -->
+                                    <div class="form-group">
+                                        <label> First Name:</label>
+                                        <input type="text" class="form-control" id="firstname" placeholder="" required>
+                                    </div><br>
+
+                                    <!-- Last Name -->
+                                    <div class="form-group">
+                                        <label>Last Name:</label>
+                                        <input type="text" class="form-control" id="lastname" placeholder="" required>
+                                    </div><br>
+
+                                    <!-- Email Address -->
+                                    <div class="form-group">
+                                        <label>Email Address:</label>
+                                        <input type="text" class="form-control" id="email" placeholder="">
+                                    </div><br>
+
+                                    <!-- Phone Number -->
+                                    <div class="form-group">
+                                        <label>Phone Number:</label>
+                                        <input type="text" class="form-control" id="phonenum" placeholder="">
+                                    </div><br>
+
+                                    <!-- Login Button -->
+                                    <div class="text-center">
+                                        <button type="submit" onclick="addContact()" class="btn btn-primary">Add Contact</button><br>
+                                    </div><br>
+                                </form>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-10 justify-content-center">
+                        <table id="contactlist" class="table table-responsive px-2 table-dark">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First Name</th>
+                                    <th scope="col">Last Name</th>
+                                    <th scope="col">Email Address</th>
+                                    <th scope="col">Phone Number</th>
+                                    <th scope="col">Date Added</th>
+                                    <th scope="col">Edit/Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td class="unsetTable">Mark</td>
+                                    <td class="unsetTable">Otto</td>
+                                    <td class="unsetTable">@mdo</td>
+                                    <td class="unsetTable">123-456-7890</td>
+                                    <td>1.31.23</td>
+                                    <td><button type="submit" id="editbutton" onclick="editContact()" class="btn btn-primary"></button><button type="submit" id="deletebutton" onclick="addContact()" class="btn btn-primary"></button><br></td>
+
+
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td class="unsetTable">Jacob</td>
+                                    <td class="unsetTable">Thornton</td>
+                                    <td class="unsetTable">@fat</td>
+                                    <td class="unsetTable">123-456-7890</td>
+                                    <td>1.31.23</td>
+                                    <td><button type="submit" id="editbutton" onclick="addContact()" class="btn btn-primary"></button><button type="submit" id="deletebutton" onclick="addContact()" class="btn btn-primary"></button><br></td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td class="unsetTable">Larry</td>
+                                    <td class="unsetTable">the Bird</td>
+                                    <td class="unsetTable">@twitter</td>
+                                    <td class="unsetTable">123-456-7890</td>
+                                    <td>1.31.23</td>
+                                    <td><button type="submit" id="editbutton" onclick="addContact()" class="btn btn-primary"></button><button type="submit" id="deletebutton" onclick="addContact()" class="btn btn-primary"></button><br></td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+</body>
+
+</html>

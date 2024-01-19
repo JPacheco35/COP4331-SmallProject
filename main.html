@@ -1,0 +1,286 @@
+<!-- LOGGED IN ACCOUNT PAGE -->
+<html lang = "en">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        
+        <!-- Import BootStrap Stuff -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        
+        <!-- Import Custom CSS -->
+        <link href="CSS/index.css" rel = "stylesheet">
+
+        <!-- Tab Title -->
+        <title>Contact Manager</title>
+    </head>
+
+
+    <body id = "mainBody" onload = "readCookie(); showContacts();">
+        <!-- Import addContact()-->
+        <script type="text/javascript" src="JS/CRUD_Operations.js"></script>
+        <script type="text/javascript" src="JS/accountManagement.js"></script>
+        <script type="text/javascript" src="JS/md5.js"></script>
+
+        <!-- MOBILE Page Layout -->
+        <!-- For Screens 768px wide or less-->
+
+        <!-- All Content is Centered in Mobile Version-->
+        <nav class="show-mobile text-center">
+
+          <!-- UCF Logo + Main Title Header -->
+          <a class="d-flex text-decoration-none">
+            <div class = "container-fluid p-2mo">
+                <img src = "https://i.pinimg.com/originals/f8/1e/a7/f81ea7c786f7518345b1f1e2a9584cc8.png" alt = "" width="40px" height="50px"> <!-- UCF Logo -->
+                <span class="fs-4">Contact Manager</span>                                                                                      <!-- Title Header -->
+            </div><br>
+          </a>
+
+          <!-- Greetings + Log Out Button -->
+          <ul class="nav nav-pills justify-content-center">
+            <li class="nav-item"><a id = "helloBanner1" href="#" class="nav-link disabled">Hello, FNAME LNAME</a></li>    <!-- Greetings -->
+            <li class="nav-item"><a href="index.html" onclick="doLogout();" class="nav-link">Log Out</a></li>             <!-- Log Out Button -->
+          </ul>
+          <!-- Add Contact Sidebar -->
+          <div class="col text-center">
+            <div class=""d-flex flex-column flex-shrink-0 p-3 text-white style="width: 100%;">
+              <ul class="nav nav-pills flex-column mb-auto">
+                <!-- Existing User Login Form, runs addContact.php NEED TO ADD FUNCTIONALITY TO THIS -->
+                <form id = "mobileAdd" class = "">
+        
+                <!-- First Name Field -->
+                <div class="form-group form-check-inline">
+                    <label> First Name:</label>
+                    <input type="text" class="form-control" id="firstname-m" placeholder="" required>
+                </div><br><br>
+
+                <!-- Last Name Field -->
+                <div class="form-group form-check-inline">
+                    <label>Last Name:</label>
+                    <input type="text" class="form-control" id="lastname-m" placeholder="" required>
+                </div><br><br>
+
+                <!-- Email Address Field -->
+                <div class="form-group form-check-inline">
+                    <label>Email Address:</label>
+                    <input type="text" class="form-control" id="email-m" placeholder="">
+                </div><br><br>
+
+                <!-- Phone Number Field -->
+                <div class="form-group form-check-inline">
+                    <label>Phone Number:</label>
+                    <input type="text" class="form-control" id="phonenum-m" placeholder="">
+                </div><br><br>
+
+                <!-- Login Button -->  
+                <div class = "text-center">
+                    <button type="submit" onclick="addContact()" class="btn btn-primary">Add Contact</button><br>
+                </div><br>
+
+                </form>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Search Field and Button -->
+          <div class = "container-fluid p-2">
+            <div class="input-group">
+                <input type="search" class="form-control" placeholder="Search..." aria-label="Search" aria-describedby="search-addon" />    <!-- Search Field NEED TO ADD SEARCH FUNCTIONALITY -->
+                <button type="submit" class="btn btn-primary">Search</button>                                                               <!-- Search Button NEED TO ADD FUNCTIONABLITY TO BUTTON-->
+            </div>
+          </div>
+          
+          
+          <!-- Contact Table NEED TO FILL THIS WITH USER DATA -->
+          <div class="col-sm-10 justify-content-center">
+            <table id = "contactlist-m" class="table table-responsive px-2 table-dark">
+
+                <!-- Table Headers-->
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Email Address</th>
+                    <th scope="col">Phone Number</th>
+                    <th scope="col">Date Added</th>
+                    <th scope="col">Edit/Delete</th>
+                  </tr>
+                </thead>
+
+                <!-- Table Body NEED TO UPDATE THIS SO IT FILLS WITH USER CONTACTS-->
+                <tbody id = "tbody-m">
+
+                  <!-- Example Filler Items -->
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>123-456-7890</td>
+                    <td>1.31.23</td>
+                    <td><button type="submit" id = "editbutton" onclick="addContact()" class="btn btn-primary"></button><button type="submit" id = "deletebutton" onclick="addContact()" class="btn btn-primary"></button><br></td>
+                
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>123-456-7890</td>
+                    <td>1.31.23</td>
+                    <td><button type="submit" id = "editbutton" onclick="addContact()" class="btn btn-primary"></button><button type="submit" id = "deletebutton" onclick="addContact()" class="btn btn-primary"></button><br></td>
+
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                    <td>123-456-7890</td>
+                    <td>1.31.23</td>
+                    <td><button type="submit" id = "editbutton" onclick="addContact()" class="btn btn-primary"></button><button type="submit" id = "deletebutton" onclick="addContact()" class="btn btn-primary"></button><br></td>
+
+                  </tr>
+                </tbody>
+
+              </table>
+          </div>
+
+          
+
+        </nav>
+      
+    
+        <!-- DESKTOP Page Layout-->
+        <!-- For Screens 769px wide or larger -->
+        <nav class="hide-mobile">
+
+          <div class="container-fluid h-100 " style = "padding-left: 0px; padding-right: 0px;">
+            
+            <!-- Top Banner -->
+            <header class="d-flex py-3 border-bottom" style="position:relative;">
+
+              <!-- UCF Logo + Title Header + Search Bar -->
+              <a class="d-flex text-decoration-none">
+
+                <!-- UCF Logo + Title Header -->
+                <div class = "container-fluid p-2mo">
+                    <img src = "https://i.pinimg.com/originals/f8/1e/a7/f81ea7c786f7518345b1f1e2a9584cc8.png" alt = "" width="40px" height="50px"> <!-- UCF Logo -->
+                    <img src = "#" alt = "" width="40px" height="0px">                                                                             <!-- Blank Image Spacer -->
+                    <span class="fs-4">Contact Manager</span>                                                                                      <!-- Title Header -->
+                </div>
+
+                <!-- Blank Image Spacer -->
+                <img src = "#" alt = "" width="250px" height="0px">
+
+                <!-- Search Bar -->
+                <div class = "container-fluid p-2">
+                    <div class="input-group" >
+                        <input type="search" id ="searchbar" class="form-control" placeholder="Search..." aria-label="Search"></input>   <!-- Search Field -->
+                        <button type="submit" class="btn btn-primary">Search</button>                                                                                    <!-- Search Button -->
+                    </div>
+                </div>
+  
+              </a>
+        
+              <!-- Blank Image Spacer -->
+              <img src = "#" alt = "" width="15%" height="0px">
+
+              <!-- Greetings + Log Out -->
+              <div class="greetingsout" >
+                <ul class="nav nav-pills p-2" style="left: 900px">
+                      <li class="nav-item"><a href="#" class="nav-link disabled" id = "helloBanner2">Hello, FNAME LNAME</a></li>     <!-- Greetings -->
+                      <li class="nav-item"><a href="index.html" onclick="doLogout();" class="nav-link">Log Out</a></li>              <!-- Log Out Button -->
+                </ul>
+              </div>
+            </header> 
+            <!-- Middle Body -->
+            <div class="container-fluid" >
+
+                <div class="row ms-md-0 me-0" style="width:100%; height: 90%;">
+                  
+                    <!-- Add Contact Sidebar -->
+                    <div class="col-sm-2">
+
+                        <div class="d-flex flex-column flex-shrink-0 p-3 text-white border-end" style="width: 100%; height: 100%; overflow: auto;">
+                          <ul class="nav nav-pills flex-column mb-auto">
+              
+                            <!-- Existing User Login Form, runs addContact.php NEED TO ADD FUNCTIONALITY HERE -->
+                            <form id = "desktopAdd">
+                      
+                                <!-- First Name Field -->
+                                <div class="form-group">
+                                    <label> First Name:</label>
+                                    <input type="text" class="form-control" id="firstname" placeholder="" required>
+                                </div><br>
+          
+                                <!-- Last Name Field -->
+                                <div class="form-group">
+                                    <label>Last Name:</label>
+                                    <input type="text" class="form-control" id="lastname" placeholder="" required>
+                                </div><br>
+            
+                                <!-- Email Address Field -->
+                                <div class="form-group">
+                                    <label>Email Address:</label>
+                                    <input type="text" class="form-control" id="email" placeholder="">
+                                </div><br>
+            
+                                <!-- Phone Number Field -->
+                                <div class="form-group">
+                                    <label>Phone Number:</label>
+                                    <input type="text" class="form-control" id="phonenum" placeholder="">
+                                </div><br>
+            
+                                <!-- Login Button NEED TO ADD FUNCTIONALITY -->  
+                                <div class = "text-center">
+                                    <button type="button" onclick="addContact('desktopAdd');" class="btn btn-primary">Add Contact</button><br>
+                                </div><br>
+
+                            </form>
+            
+                          </ul>
+                        </div>
+
+                    </div>
+
+                    <!-- Contact Table NEED TO FILL THIS WITH USER DATA -->
+                    <div class="col-sm-10 justify-content-center" style="overflow-y: scroll; height: 100%;">
+
+                        <table id = "contactlist" class="table table-responsive px-2 table-dark">
+
+                            <!-- Table Headers -->
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">First Name</th>
+                                <th scope="col">Last Name</th>
+                                <th scope="col">Email Address</th>
+                                <th scope="col">Phone Number</th>
+                                <th scope="col">Date Added</th>
+                                <th scope="col">Edit/Delete</th>
+                              </tr>
+                            </thead>
+
+                            <!-- Table Data FILLED WITH TEST DATA FOR NOW -->
+                            <tbody id = "tbody-d">
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+
+              </div>
+
+          </div> 
+
+        </nav>
+
+    <p hidden id = "userID"></p>    
+
+    </body>
+
+</html>
